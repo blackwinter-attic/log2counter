@@ -1,0 +1,143 @@
+#! /usr/bin/ruby
+
+#--
+###############################################################################
+#                                                                             #
+# log2counter -- Convert (analyse) Apache log files to COUNTER CSV.           #
+#                                                                             #
+# Copyright (C) 2007-2009 University of Cologne,                              #
+#                         Albertus-Magnus-Platz,                              #
+#                         50932 Cologne, Germany                              #
+#                                                                             #
+# Authors:                                                                    #
+#     Jens Wille <jens.wille@uni-koeln.de>                                    #
+#                                                                             #
+# log2counter is free software; you can redistribute it and/or modify it      #
+# under the terms of the GNU General Public License as published by the Free  #
+# Software Foundation; either version 3 of the License, or (at your option)   #
+# any later version.                                                          #
+#                                                                             #
+# log2counter is distributed in the hope that it will be useful, but WITHOUT  #
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or       #
+# FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for    #
+# more details.                                                               #
+#                                                                             #
+# You should have received a copy of the GNU General Public License along     #
+# with log2counter. If not, see <http://www.gnu.org/licenses/>.               #
+#                                                                             #
+###############################################################################
+#++
+
+require 'optparse'
+require 'yaml'
+require 'zlib'
+
+$: << File.join(File.dirname(__FILE__), '..', 'lib')
+
+require 'log2counter'
+
+USAGE = "Usage: #{$0} [-h|--help] [options]"
+abort USAGE if ARGV.empty?
+
+def open_file(file, mode = 'r')
+  if file =~ /\.gz/i
+    case mode
+      when 'r' then Zlib::GzipReader.open(file)
+      when 'w' then Zlib::GzipWriter.open(file)
+      else          raise ArgumentError, "invalid mode #{mode}"
+    end
+  else
+    File.open(file, mode)
+  end
+end
+
+options = {
+  :licensees      => 'licensees.yaml',
+  :log_file       => STDIN,
+  :csv_file       => STDOUT,
+  :months         => nil,
+  :regexp         => nil,
+  :summarize      => false,
+  :summarize_file => nil
+}
+
+OptionParser.new { |opts|
+  opts.banner = USAGE
+
+  opts.separator ' '
+  opts.separator 'Options:'
+
+  opts.on('-i', '--log-file LOG',  'Input log file  [Default: STDIN]') { |f|
+    abort "Can't find log file #{f}" unless File.readable?(f)
+    options[:log_file] = open_file(f)
+  }
+
+  opts.on('-o', '--csv-file CSV',  'Output CSV file [Default: STDOUT]') { |f|
+    options[:csv_file] = open_file(f, 'w')
+  }
+
+  opts.separator ' '
+
+  opts.on('-l', '--licensees YAML', "Licensees list  [Default: #{options[:licensees]}]") { |f|
+    abort "Can't find licensee file #{f}" unless File.readable?(f)
+    options[:licensees] = f
+  }
+
+  opts.separator ' '
+
+  opts.on('-m', '--months LIST', 'Comma-separated list of month(s) [YYYY_MM]') { |m|
+    options[:months] = m.split(',')
+  }
+
+  opts.on('-r', '--regexp REGEXP', 'Comma-separated list of regular expressions', '[id=...,login=...,search=...,download=...]') { |r|
+    r.split(',').each { |str|
+      key, pat = str.split('=', 2)
+      (options[:regexp] ||= {})[key.to_sym] = Regexp.new(pat)
+    }
+  }
+
+  opts.separator ' '
+
+  opts.on('-s', '--summarize', "Summarize stats per licensee per month; don't", 'print client details') {
+    options[:summarize] = true
+  }
+
+  opts.on('-S', '--summarize-file CSV', 'Summarize existing CSV file (in full format);', "use '-' for STDIN") { |f|
+    options[:summarize] = true
+
+    if f == '-'
+      options[:summarize_file] = STDIN
+    else
+      abort "Can't find CSV file #{f}" unless File.readable?(f)
+      options[:summarize_file] = open_file(f)
+    end
+  }
+
+  opts.separator ' '
+  opts.separator 'Generic options:'
+
+  opts.on('-h', '--help', 'Print this help message and exit') {
+    puts opts
+    exit
+  }
+
+  opts.on('--version', 'Print program version and exit') {
+    puts "#{File.basename($0)} v#{Log2COUNTER::VERSION}"
+    exit
+  }
+
+  opts.separator ' '
+  opts.separator "If LOG or CSV ends in '.gz', it's treated as a Gzipped file."
+}.parse!
+
+begin
+  stats = if options[:summarize_file]
+    Log2COUNTER.load(options[:summarize_file])
+  else
+    Log2COUNTER.parse(options[:log_file], YAML.load_file(options[:licensees]), options[:months], options[:regexp])
+  end
+
+  Log2COUNTER.print(stats, options[:csv_file], options[:summarize])
+ensure
+   options.each { |k, v| v.close if v.respond_to?(:close) }
+end

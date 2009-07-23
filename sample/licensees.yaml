@@ -1,0 +1,8 @@
+---
+#"Somewhere, Inst.":
+#  :name: "Inst_Somewhere"
+#  :ip:
+#    - "12.34.56"
+#  :id:
+#    - "inst.somewhere"
+#  :export: true

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>File: log_parser.rb [log2counter Application documentation (v0.0.4)]</title>
+
+  <link type="text/css" media="screen" href="../../../rdoc.css" rel="stylesheet" />
+
+  <script src="../../../js/jquery.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../js/thickbox-compressed.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../js/quicksearch.js" type="text/javascript"
+    charset="utf-8"></script>
+  <script src="../../../js/darkfish.js" type="text/javascript"
+    charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+  <div id="metadata">
+    <dl>
+      <dt class="modified-date">Last Modified</dt>
+      <dd class="modified-date">Thu Dec 17 17:53:02 +0100 2009</dd>
+
+      
+      <dt class="requires">Requires</dt>
+      <dd class="requires">
+        <ul>
+        
+          <li>logger</li>
+        
+        </ul>
+      </dd>
+      
+
+      
+    </dl>
+  </div>
+
+  <div id="documentation">
+    
+    <div class="description">
+      <h2>Description</h2>
+      
+<p>This program parses weblogs in the NCSA Common (access log) format or NCSA
+Combined log format</p>
+
+<p>One line consists of</p>
+
+<pre>host rfc931 username date:time request statuscode bytes</pre>
+
+<p>For example</p>
+
+<pre>1.2.3.4 - dsmith [10/Oct/1999:21:15:05 +0500] &quot;GET /index.html HTTP/1.0&quot; 200 12
+                 [dd/MMM/yyyy:hh:mm:ss +-hhmm]</pre>
+
+<p>Where</p>
+
+<pre>dd is the day of the month
+MMM is the month
+yyy is the year
+:hh is the hour
+:mm is the minute
+:ss is the seconds
++-hhmm is the time zone</pre>
+
+<p>In practice, the day is typically logged in two-digit format even for
+single-digit days. For example, the second day of the month would be
+represented as 02. However, some HTTP servers do log a single digit day as
+a single digit. When parsing log records, you should be aware of both
+possible day representations.</p>
+<table class="rdoc-list"><tr><td class="rdoc-term"><p>Author</p></td>
+<td>
+<p>Jan Wikholm [jw@jw.fi]</p>
+</td></tr><tr><td class="rdoc-term"><p>License</p></td>
+<td>
+<p>MIT</p>
+</td></tr></table>
+
+<p># # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # #</p>
+
+<p>Modified by Jens Wille &lt;jens.wille@uni-koeln.de&gt;; see
+log_parser.rb.orig for the original file.</p>
+
+    </div>
+    
+  </div>
+</body>
+</html>
+

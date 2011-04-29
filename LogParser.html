@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: LogParser</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/log2counter/vendor/log_parser_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/log2counter/vendor/log_parser.rb">lib/log2counter/vendor/log_parser.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="LogParser/FormatError.html">LogParser::FormatError</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-check_format">#check_format</a></li>
+          
+          <li><a href="#method-i-generate_stats">#generate_stats</a></li>
+          
+          <li><a href="#method-i-get_page">#get_page</a></li>
+          
+          <li><a href="#method-i-initialize_known_formats">#initialize_known_formats</a></li>
+          
+          <li><a href="#method-i-parse_io_stream">#parse_io_stream</a></li>
+          
+          <li><a href="#method-i-parse_line">#parse_line</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./COPYING.html">COPYING</a></li>
+        
+          <li class="file"><a href="./ChangeLog.html">ChangeLog</a></li>
+        
+          <li class="file"><a href="./README.html">README</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Log2COUNTER.html">Log2COUNTER</a></li>
+        
+          <li><a href="./Log2COUNTER/Parser.html">Log2COUNTER::Parser</a></li>
+        
+          <li><a href="./Log2COUNTER/Printer.html">Log2COUNTER::Printer</a></li>
+        
+          <li><a href="./Log2COUNTER/Version.html">Log2COUNTER::Version</a></li>
+        
+          <li><a href="./LogParser.html">LogParser</a></li>
+        
+          <li><a href="./LogParser/FormatError.html">LogParser::FormatError</a></li>
+        
+          <li><a href="./Fixnum.html">Fixnum</a></li>
+        
+          <li><a href="./Hash.html">Hash</a></li>
+        
+          <li><a href="./LogFormat.html">LogFormat</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">LogParser</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="LOG_FORMATS">LOG_FORMATS</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="STAT_ENV_MAP">STAT_ENV_MAP</a></dt>
+          
+          <dd class="description"><p>Add any values that you may return here.</p></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="constraint-attribute-method" class="method-detail">
+          <a name="constraint"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">constraint</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="known_formats-attribute-method" class="method-detail">
+          <a name="known_formats"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">known_formats</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+        <div id="log_format-attribute-method" class="method-detail">
+          <a name="log_format"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">log_format</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(format = nil, constraint = nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/log2counter/vendor/log_parser.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">format</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">constraint</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-ivar">@format</span>     = <span class="ruby-identifier">format</span>
+  <span class="ruby-ivar">@constraint</span> = <span class="ruby-identifier">constraint</span>
+
+  <span class="ruby-identifier">initialize_known_formats</span>
+
+  <span class="ruby-ivar">@log_format</span> = <span class="ruby-identifier">known_formats</span>[<span class="ruby-ivar">@format</span>] <span class="ruby-keyword">if</span> <span class="ruby-ivar">@format</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="check_format-method" class="method-detail ">
+          <a name="method-i-check_format"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">check_format</span><span
+              class="method-args">(line)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Checks which standard the log file (well one line) is. Automatically checks
+for most complex (longest) regex first.</p>
+            
+
+            
+            <div class="method-source-code" id="check_format-source">
+<pre>
+<span class="ruby-comment"># File lib/log2counter/vendor/log_parser.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_format</span>(<span class="ruby-identifier">line</span>)
+  <span class="ruby-ivar">@known_formats</span>.<span class="ruby-identifier">sort_by</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">log_format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">log_format</span>.<span class="ruby-identifier">format_regex</span>.<span class="ruby-identifier">source</span>.<span class="ruby-identifier">size</span>
+  }.<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">log_format</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">key</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">log_format</span>.<span class="ruby-identifier">format_regex</span>)
+  }
+
+  <span class="ruby-keyword">return</span> <span class="ruby-value">:unknown</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- check_format-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- check_format-method -->
+
+      
+        <div id="generate_stats-method" class="method-detail ">
+          <a name="method-i-generate_stats"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generate_stats</span><span
+              class="method-args">(parsed_data)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Populate a stats hash one line at a time. Add extra fields into the <a
+href="LogParser.html#STAT_ENV_MAP">STAT_ENV_MAP</a> hash at the top of this
+file.</p>
+            
+
+            
+            <div class="method-source-code" id="generate_stats-source">
+<pre>
+<span class="ruby-comment"># File lib/log2counter/vendor/log_parser.rb, line 175</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generate_stats</span>(<span class="ruby-identifier">parsed_data</span>)
+  <span class="ruby-identifier">stats</span> = { <span class="ruby-string">'PATH_INFO'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">get_page</span>(<span class="ruby-identifier">parsed_data</span>[<span class="ruby-value">:request</span>]) }
+
+  <span class="ruby-constant">STAT_ENV_MAP</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">stat_name</span>, <span class="ruby-identifier">env_name</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">stats</span>[<span class="ruby-identifier">env_name</span>] = <span class="ruby-identifier">parsed_data</span>[<span class="ruby-identifier">stat_name</span>] <span class="ruby-keyword">if</span> <span class="ruby-identifier">parsed_data</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">stat_name</span>)
+  }
+
+  <span class="ruby-identifier">stats</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generate_stats-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generate_stats-method -->
+
+      
+        <div id="get_page-method" class="method-detail ">
+          <a name="method-i-get_page"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_page</span><span
+              class="method-args">(request)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="get_page-source">
+<pre>
+<span class="ruby-comment"># File lib/log2counter/vendor/log_parser.rb, line 185</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_page</span>(<span class="ruby-identifier">request</span>)
+  (<span class="ruby-identifier">request</span>[<span class="ruby-regexp">/\/.*?(?:\s|\z)/</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">request</span>).<span class="ruby-identifier">strip</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_page-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_page-method -->
+
+      
+        <div id="initialize_known_formats-method" class="method-detail ">
+          <a name="method-i-initialize_known_formats"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">initialize_known_formats</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Processes the format string into symbols and test regex and saves using <a
+href="LogFormat.html">LogFormat</a> class.</p>
+            
+
+            
+            <div class="method-source-code" id="initialize_known_formats-source">
+<pre>
+<span class="ruby-comment"># File lib/log2counter/vendor/log_parser.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize_known_formats</span>
+  <span class="ruby-ivar">@known_formats</span> = {}
+
+  <span class="ruby-constant">LOG_FORMATS</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@known_formats</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-constant">LogFormat</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">format</span>)
+  }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- initialize_known_formats-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- initialize_known_formats-method -->
+
+      
+        <div id="parse_io_stream-method" class="method-detail ">
+          <a name="method-i-parse_io_stream"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse_io_stream</span><span
+              class="method-args">(stream)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>This is where the magic happens. This is the end-to-end business logic of
+the class.</p>
+
+<p>Call with a block that will be called with each line, as a hash.</p>
+            
+
+            
+            <div class="method-source-code" id="parse_io_stream-source">
+<pre>
+<span class="ruby-comment"># File lib/log2counter/vendor/log_parser.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_io_stream</span>(<span class="ruby-identifier">stream</span>)
+  <span class="ruby-identifier">stats</span> = []
+  <span class="ruby-identifier">lines_parsed</span> = <span class="ruby-value">0</span>
+
+  <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">line</span>.<span class="ruby-identifier">chomp!</span>
+    <span class="ruby-identifier">lines_parsed</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;##{lines_parsed}&quot;</span> <span class="ruby-keyword">if</span> (<span class="ruby-identifier">lines_parsed</span> <span class="ruby-operator">%</span> <span class="ruby-value">10000</span>).<span class="ruby-identifier">zero?</span>
+
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">constraint</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">!~</span> <span class="ruby-identifier">constraint</span>
+
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">parsed_data</span> = <span class="ruby-identifier">parse_line</span>(<span class="ruby-identifier">line</span>)
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">generate_stats</span>(<span class="ruby-identifier">parsed_data</span>)
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">FormatError</span>
+      <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;Corrupt line [#{lines_parsed}]: #{line.inspect}&quot;</span>
+    <span class="ruby-keyword">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">err</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-identifier">err</span>.<span class="ruby-identifier">class</span>, <span class="ruby-node">&quot;#{err.class} [#{lines_parsed}]: #{line.inspect}\n\n&quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+                       <span class="ruby-node">&quot;#{parsed_data.inspect}\n\n#{err}&quot;</span>
+    <span class="ruby-keyword">end</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parse_io_stream-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parse_io_stream-method -->
+
+      
+        <div id="parse_line-method" class="method-detail ">
+          <a name="method-i-parse_line"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">parse_line</span><span
+              class="method-args">(line)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="parse_line-source">
+<pre>
+<span class="ruby-comment"># File lib/log2counter/vendor/log_parser.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_line</span>(<span class="ruby-identifier">line</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@format</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@log_format</span>
+    <span class="ruby-ivar">@format</span>     = <span class="ruby-identifier">check_format</span>(<span class="ruby-identifier">line</span>)
+    <span class="ruby-ivar">@log_format</span> = <span class="ruby-identifier">known_formats</span>[<span class="ruby-ivar">@format</span>]
+
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">log_format</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">log_format</span>.<span class="ruby-identifier">format_regex</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">FormatError</span>, <span class="ruby-identifier">line</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">data</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-identifier">log_format</span>.<span class="ruby-identifier">format_regex</span>).<span class="ruby-identifier">flatten</span>
+
+  <span class="ruby-identifier">parsed_data</span> = {}
+  <span class="ruby-identifier">log_format</span>.<span class="ruby-identifier">format_symbols</span>.<span class="ruby-identifier">each_with_index</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">format_symbol</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">parsed_data</span>[<span class="ruby-identifier">format_symbol</span>] = <span class="ruby-identifier">data</span>[<span class="ruby-identifier">index</span>]
+  }
+
+  <span class="ruby-comment"># Remove [] from time.</span>
+  <span class="ruby-identifier">parsed_data</span>[<span class="ruby-value">:datetime</span>] <span class="ruby-operator">&amp;&amp;=</span> <span class="ruby-identifier">parsed_data</span>[<span class="ruby-value">:datetime</span>][<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">-1</span>]
+
+  <span class="ruby-comment"># Add IP as domain if we don't have a domain (virtual host).</span>
+  <span class="ruby-comment"># Assumes we always have an IP.</span>
+  <span class="ruby-identifier">parsed_data</span>[<span class="ruby-value">:domain</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">parsed_data</span>[<span class="ruby-value">:ip</span>]
+
+  <span class="ruby-identifier">parsed_data</span>[<span class="ruby-value">:format</span>] = <span class="ruby-ivar">@format</span>
+
+  <span class="ruby-identifier">parsed_data</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- parse_line-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- parse_line-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

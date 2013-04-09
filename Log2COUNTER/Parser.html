@@ -1,328 +1,311 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+
+<html>
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-  <title>Class: Log2COUNTER::Parser</title>
+<title>class Log2COUNTER::Parser - log2counter Application documentation (v0.0.4)</title>
 
-  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
 
-  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
 
-</head>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
 <body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
 
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
-        <h3 class="section-header">
-          <a href="../index.html">Home</a>
-          <a href="../index.html#classes">Classes</a>
-          <a href="../index.html#methods">Methods</a>
-        </h3>
-      </div>
-    </div>
 
-    <div id="file-metadata">
-      <div id="file-list-section" class="section">
-        <h3 class="section-header">In Files</h3>
-        <div class="section-body">
-          <ul>
-          
-            <li><a href="../lib/log2counter/parser_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="lib/log2counter/parser.rb">lib/log2counter/parser.rb</a></li>
-          
-          </ul>
-        </div>
-      </div>
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
 
-      
-    </div>
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
 
-    <div id="class-metadata">
-      
-      <!-- Parent Class -->
-      <div id="parent-class-section" class="section">
-        <h3 class="section-header">Parent</h3>
-        
-        <p class="link">Object</p>
-        
-      </div>
-      
 
-      
+  
 
-      
-
-      
-      <!-- Method Quickref -->
-      <div id="method-list-section" class="section">
-        <h3 class="section-header">Methods</h3>
-        <ul class="link-list">
-          
-          <li><a href="#method-c-load">::load</a></li>
-          
-          <li><a href="#method-c-new">::new</a></li>
-          
-          <li><a href="#method-i-initialize_licensees">#initialize_licensees</a></li>
-          
-          <li><a href="#method-i-parse">#parse</a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-    </div>
-
-    <div id="project-metadata">
-      
-      
-      <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
-        <ul>
-        
-          <li class="file"><a href="../COPYING.html">COPYING</a></li>
-        
-          <li class="file"><a href="../ChangeLog.html">ChangeLog</a></li>
-        
-          <li class="file"><a href="../README.html">README</a></li>
-        
-        </ul>
-      </div>
-      
-
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class/Module Index
-          <span class="search-toggle"><img src="../images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
-
-        <ul class="link-list">
-        
-          <li><a href="../Log2COUNTER.html">Log2COUNTER</a></li>
-        
-          <li><a href="../Log2COUNTER/Parser.html">Log2COUNTER::Parser</a></li>
-        
-          <li><a href="../Log2COUNTER/Printer.html">Log2COUNTER::Printer</a></li>
-        
-          <li><a href="../Log2COUNTER/Version.html">Log2COUNTER::Version</a></li>
-        
-          <li><a href="../LogParser.html">LogParser</a></li>
-        
-          <li><a href="../LogParser/FormatError.html">LogParser::FormatError</a></li>
-        
-          <li><a href="../Fixnum.html">Fixnum</a></li>
-        
-          <li><a href="../Hash.html">Hash</a></li>
-        
-          <li><a href="../LogFormat.html">LogFormat</a></li>
-        
-          <li><a href="../String.html">String</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
-
-      
-    </div>
-  </div>
-
-  <div id="documentation">
-    <h1 class="class">Log2COUNTER::Parser</h1>
-
-    <div id="description" class="description">
-      
-    </div><!-- description -->
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/log2counter/parser.rb
+    <li>lib/log2counter/printer.rb
+  </ul>
+</nav>
 
     
-    <div id="5Buntitled-5D" class="documentation-section">
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-load">::load</a>
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-initialize_licensees">#initialize_licensees</a>
+    
+    <li ><a href="#method-i-parse">#parse</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../COPYING.html">COPYING</a>
+  
+    <li class="file"><a href="../ChangeLog.html">ChangeLog</a>
+  
+    <li class="file"><a href="../README.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Fixnum.html">Fixnum</a>
+  
+    <li><a href="../Hash.html">Hash</a>
+  
+    <li><a href="../Log2COUNTER.html">Log2COUNTER</a>
+  
+    <li><a href="../Log2COUNTER/Parser.html">Log2COUNTER::Parser</a>
+  
+    <li><a href="../Log2COUNTER/Parser/Date.html">Log2COUNTER::Parser::Date</a>
+  
+    <li><a href="../Log2COUNTER/Printer.html">Log2COUNTER::Printer</a>
+  
+    <li><a href="../Log2COUNTER/Version.html">Log2COUNTER::Version</a>
+  
+    <li><a href="../LogFormat.html">LogFormat</a>
+  
+    <li><a href="../LogParser.html">LogParser</a>
+  
+    <li><a href="../LogParser/FormatError.html">LogParser::FormatError</a>
+  
+    <li><a href="../String.html">String</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Log2COUNTER::Parser</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
       
+        <dt id="ABBR2MONTH">ABBR2MONTH
+        
+        <dd class="description"><p>Map month abbreviations to their two-digit number equivalent.</p>
+        
+      
+        <dt id="DEFAULT_MONTHS">DEFAULT_MONTHS
+        
+        <dd class="description"><p>By default we will consider the current year.</p>
+        
+      
+        <dt id="DEFAULT_REGEXP">DEFAULT_REGEXP
+        
+        <dd class="description"><p>NOTE: <code>:id</code> should contain capture group for ID</p>
+        
+      
+        <dt id="DEFAULT_STATS">DEFAULT_STATS
+        
+        <dd class="description"><p>This is what we start with – all zero.</p>
+        
+      
+      </dl>
+    </section>
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
 
       
+      <div id="attribute-i-constraint" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">constraint</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
 
-      
-      <!-- Constants -->
-      <div id="constants-list" class="section">
-        <h3 class="section-header">Constants</h3>
-        <dl>
+        <div class="method-description">
         
-          <dt><a name="ABBR2MONTH">ABBR2MONTH</a></dt>
-          
-          <dd class="description"><p>Map month abbreviations to their two-digit number equivalent.</p></dd>
-          
         
-          <dt><a name="DEFAULT_MONTHS">DEFAULT_MONTHS</a></dt>
-          
-          <dd class="description"><p>By default we will consider the current year.</p></dd>
-          
         
-          <dt><a name="DEFAULT_REGEXP">DEFAULT_REGEXP</a></dt>
-          
-          <dd class="description"><p>NOTE: <tt>:id</tt> should contain capture group for ID</p></dd>
-          
-        
-          <dt><a name="DEFAULT_STATS">DEFAULT_STATS</a></dt>
-          
-          <dd class="description"><p>This is what we start with – all zero.</p></dd>
-          
-        
-        </dl>
+        </div>
       </div>
       
+      <div id="attribute-i-licensees" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">licensees</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
 
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
       
-      <!-- Attributes -->
-      <div id="attribute-method-details" class="method-section section">
-        <h3 class="section-header">Attributes</h3>
-
-        
-        <div id="constraint-attribute-method" class="method-detail">
-          <a name="constraint"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">constraint</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
+      <div id="attribute-i-licensees_by_id" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">licensees_by_id</span><span
+            class="attribute-access-type">[R]</span>
         </div>
-        
-        <div id="licensees-attribute-method" class="method-detail">
-          <a name="licensees"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">licensees</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
 
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
+        <div class="method-description">
         
-        <div id="licensees_by_id-attribute-method" class="method-detail">
-          <a name="licensees_by_id"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">licensees_by_id</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
         
-        <div id="licensees_by_ip-attribute-method" class="method-detail">
-          <a name="licensees_by_ip"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">licensees_by_ip</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
         
-        <div id="log_file-attribute-method" class="method-detail">
-          <a name="log_file"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">log_file</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
         </div>
-        
-        <div id="months-attribute-method" class="method-detail">
-          <a name="months"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">months</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
-        
-        <div id="regexp-attribute-method" class="method-detail">
-          <a name="regexp"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">regexp</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
-
-          <div class="method-description">
-          
-          
-          
-          </div>
-        </div>
-        
-      </div><!-- attribute-method-details -->
+      </div>
       
+      <div id="attribute-i-licensees_by_ip" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">licensees_by_ip</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
 
-      <!-- Methods -->
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
       
-      <div id="public-class-method-details" class="method-section section">
-        <h3 class="section-header">Public Class Methods</h3>
+      <div id="attribute-i-log_file" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">log_file</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
 
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
       
-        <div id="load-method" class="method-detail ">
-          <a name="method-c-load"></a>
+      <div id="attribute-i-months" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">months</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-regexp" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">regexp</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-load" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">load</span><span
+            class="method-args">(csv_file)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">load</span><span
-              class="method-args">(csv_file)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="load-source">
-<pre>
-<span class="ruby-comment"># File lib/log2counter/parser.rb, line 65</span>
+          <div class="method-source-code" id="load-source">
+            <pre><span class="ruby-comment"># File lib/log2counter/parser.rb, line 67</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">load</span>(<span class="ruby-identifier">csv_file</span>)
   <span class="ruby-constant">FasterCSV</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">csv_file</span>, <span class="ruby-value">:headers</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">true</span>).<span class="ruby-identifier">inject</span>({}) { <span class="ruby-operator">|</span><span class="ruby-identifier">stats</span>, <span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
     <span class="ruby-identifier">month</span>, <span class="ruby-identifier">licensee</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">address</span>, <span class="ruby-identifier">sessions</span>, <span class="ruby-identifier">searches</span>, <span class="ruby-identifier">downloads</span> = <span class="ruby-identifier">row</span>.<span class="ruby-identifier">fields</span>
@@ -336,36 +319,36 @@
     <span class="ruby-identifier">stats</span>
   }
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- load-source -->
-            
-          </div>
+          </div><!-- load-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- load-method -->
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(log_file, licensees, months = nil, regexp = nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
           
 
           
-        </div><!-- load-method -->
-
-      
-        <div id="new-method" class="method-detail ">
-          <a name="method-c-new"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">new</span><span
-              class="method-args">(log_file, licensees, months = nil, regexp = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="new-source">
-<pre>
-<span class="ruby-comment"># File lib/log2counter/parser.rb, line 83</span>
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/log2counter/parser.rb, line 85</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">log_file</span>, <span class="ruby-identifier">licensees</span>, <span class="ruby-identifier">months</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">regexp</span> = <span class="ruby-keyword">nil</span>)
   <span class="ruby-ivar">@log_file</span> = <span class="ruby-identifier">log_file</span>
 
@@ -375,62 +358,63 @@
   }
 
   <span class="ruby-ivar">@regexp</span> = <span class="ruby-constant">DEFAULT_REGEXP</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">regexp</span> <span class="ruby-operator">||</span> {})
-  <span class="ruby-ivar">@constraint</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">union</span>(*<span class="ruby-ivar">@regexp</span>.<span class="ruby-identifier">values</span>)
+  <span class="ruby-ivar">@constraint</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">union</span>(<span class="ruby-operator">*</span><span class="ruby-ivar">@regexp</span>.<span class="ruby-identifier">values</span>)
 
   <span class="ruby-ivar">@licensees</span> = <span class="ruby-identifier">licensees</span>.<span class="ruby-identifier">reject</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">_</span>, <span class="ruby-identifier">hash</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span><span class="ruby-identifier">hash</span>[<span class="ruby-value">:export</span>] }
   <span class="ruby-identifier">initialize_licensees</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- new-source -->
-            
-          </div>
-
+          </div><!-- new-source -->
           
+        </div>
 
-          
-        </div><!-- new-method -->
+        
 
-      
-      </div><!-- public-class-method-details -->
+        
+      </div><!-- new-method -->
+
     
-      <div id="public-instance-method-details" class="method-section section">
-        <h3 class="section-header">Public Instance Methods</h3>
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
 
-      
-        <div id="parse-method" class="method-detail ">
-          <a name="method-i-parse"></a>
-
+    
+      <div id="method-i-parse" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">parse</span><span
+            class="method-args">()</span>
           
-          <div class="method-heading">
-            <span class="method-name">parse</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
+          <span class="method-click-advice">click to toggle source</span>
           
+        </div>
+        
 
-          <div class="method-description">
-            
-            <p>Now here’s the method you want to call. Returns a hash:</p>
+        <div class="method-description">
+          
+          <p>Now here&#39;s the method you want to call. Returns a hash:</p>
 
-<pre>stats = {
-  '2007_06' =&gt; {
-    'Somewhere, Inst.' =&gt; {
-      '12.34.56.78' =&gt; {
-        :sessions  =&gt; 12,
-        :searches  =&gt; 34,
-        :downloads =&gt; 56
+<pre class="ruby"><span class="ruby-identifier">stats</span> = {
+  <span class="ruby-string">&#39;2007_06&#39;</span> =<span class="ruby-operator">&gt;</span> {
+    <span class="ruby-string">&#39;Somewhere, Inst.&#39;</span> =<span class="ruby-operator">&gt;</span> {
+      <span class="ruby-string">&#39;12.34.56.78&#39;</span> =<span class="ruby-operator">&gt;</span> {
+        :<span class="ruby-identifier">sessions</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-value">12</span>,
+        :<span class="ruby-identifier">searches</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-value">34</span>,
+        :<span class="ruby-identifier">downloads</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">56</span>
       },
-      ...
+      <span class="ruby-operator">...</span>
     },
-    ...
+    <span class="ruby-operator">...</span>
   },
-  ...
-}</pre>
-            
+  <span class="ruby-operator">...</span>
+}
+</pre>
+          
+          
 
-            
-            <div class="method-source-code" id="parse-source">
-<pre>
-<span class="ruby-comment"># File lib/log2counter/parser.rb, line 114</span>
+          
+          <div class="method-source-code" id="parse-source">
+            <pre><span class="ruby-comment"># File lib/log2counter/parser.rb, line 116</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">parse</span>
   <span class="ruby-comment"># Cache resolved host names.</span>
   <span class="ruby-identifier">addr2addr</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">hash</span>, <span class="ruby-identifier">addr</span><span class="ruby-operator">|</span>
@@ -451,26 +435,26 @@
 
   <span class="ruby-comment"># Create a new LogParser and send our log file. Yields a hash per line.</span>
   <span class="ruby-constant">LogParser</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:minimal</span>, <span class="ruby-identifier">constraint</span>).<span class="ruby-identifier">parse_io_stream</span>(<span class="ruby-identifier">log_file</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">stat</span><span class="ruby-operator">|</span>
-    <span class="ruby-identifier">path</span> = <span class="ruby-identifier">stat</span>[<span class="ruby-string">'PATH_INFO'</span>]
+    <span class="ruby-identifier">path</span> = <span class="ruby-identifier">stat</span>[<span class="ruby-string">&#39;PATH_INFO&#39;</span>]
 
-    <span class="ruby-comment"># Skip lines that don't have any useful information for us anyway.</span>
+    <span class="ruby-comment"># Skip lines that don&#39;t have any useful information for us anyway.</span>
     <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">path</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">constraint</span>
 
     <span class="ruby-comment"># Maybe we already captured the licensee ID? (see DEFAULT_REGEXP above)</span>
     <span class="ruby-identifier">id</span> = <span class="ruby-node">$1</span>
 
-    <span class="ruby-identifier">m</span>, <span class="ruby-identifier">y</span>  = <span class="ruby-identifier">stat</span>[<span class="ruby-string">'DATETIME'</span>][<span class="ruby-regexp">/\/(.*?):/</span>, <span class="ruby-value">1</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">'/'</span>)  <span class="ruby-comment"># Extract month and year</span>
-    <span class="ruby-identifier">month</span> = [<span class="ruby-identifier">y</span>, <span class="ruby-constant">ABBR2MONTH</span>[<span class="ruby-identifier">m</span>]].<span class="ruby-identifier">join</span>(<span class="ruby-string">'_'</span>)                <span class="ruby-comment"># Target format is 'YYYY_MM'</span>
+    <span class="ruby-identifier">m</span>, <span class="ruby-identifier">y</span>  = <span class="ruby-identifier">stat</span>[<span class="ruby-string">&#39;DATETIME&#39;</span>][<span class="ruby-regexp">/\/(.*?):/</span>, <span class="ruby-value">1</span>].<span class="ruby-identifier">split</span>(<span class="ruby-string">&#39;/&#39;</span>)  <span class="ruby-comment"># Extract month and year</span>
+    <span class="ruby-identifier">month</span> = [<span class="ruby-identifier">y</span>, <span class="ruby-constant">ABBR2MONTH</span>[<span class="ruby-identifier">m</span>]].<span class="ruby-identifier">join</span>(<span class="ruby-string">&#39;_&#39;</span>)                <span class="ruby-comment"># Target format is &#39;YYYY_MM&#39;</span>
 
-    <span class="ruby-comment"># Skip lines that fall out of the range we're interested in.</span>
+    <span class="ruby-comment"># Skip lines that fall out of the range we&#39;re interested in.</span>
     <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">months</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">month</span>)
 
-    <span class="ruby-identifier">address</span>  = <span class="ruby-identifier">addr2addr</span>[<span class="ruby-identifier">stat</span>[<span class="ruby-string">'REMOTE_ADDR'</span>]]
+    <span class="ruby-identifier">address</span>  = <span class="ruby-identifier">addr2addr</span>[<span class="ruby-identifier">stat</span>[<span class="ruby-string">&#39;REMOTE_ADDR&#39;</span>]]
     <span class="ruby-identifier">licensee</span> = <span class="ruby-identifier">addr2lcee</span>[<span class="ruby-identifier">address</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">licensees_by_id</span>[
-      <span class="ruby-constant">URI</span>.<span class="ruby-identifier">decode</span>(<span class="ruby-identifier">id</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">path</span>[<span class="ruby-identifier">regexp</span>[<span class="ruby-value">:id</span>], <span class="ruby-value">1</span>] <span class="ruby-operator">||</span> <span class="ruby-string">''</span>)
+      <span class="ruby-constant">URI</span>.<span class="ruby-identifier">decode</span>(<span class="ruby-identifier">id</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">path</span>[<span class="ruby-identifier">regexp</span>[<span class="ruby-value">:id</span>], <span class="ruby-value">1</span>] <span class="ruby-operator">||</span> <span class="ruby-string">&#39;&#39;</span>)
     ]
 
-    <span class="ruby-comment"># Couldn't find a matching licensee? Skip it!</span>
+    <span class="ruby-comment"># Couldn&#39;t find a matching licensee? Skip it!</span>
     <span class="ruby-keyword">next</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">licensee</span>
 
     <span class="ruby-identifier">name</span>     = <span class="ruby-identifier">licensee</span>[<span class="ruby-value">:name</span>]
@@ -479,13 +463,13 @@
     (((<span class="ruby-identifier">stats</span>[<span class="ruby-identifier">month</span>] <span class="ruby-operator">||=</span> {})[<span class="ruby-identifier">licensee</span>] <span class="ruby-operator">||=</span> {})[<span class="ruby-identifier">name</span>] <span class="ruby-operator">||=</span> {})[<span class="ruby-identifier">address</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">DEFAULT_STATS</span>.<span class="ruby-identifier">dup</span>
     <span class="ruby-identifier">_address</span> = <span class="ruby-identifier">stats</span>[<span class="ruby-identifier">month</span>][<span class="ruby-identifier">licensee</span>][<span class="ruby-identifier">name</span>][<span class="ruby-identifier">address</span>]
 
-    <span class="ruby-comment"># Increment our counts, since that's what we're here for...</span>
+    <span class="ruby-comment"># Increment our counts, since that&#39;s what we&#39;re here for...</span>
     <span class="ruby-identifier">_address</span>[<span class="ruby-value">:sessions</span>]  <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">path</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">regexp</span>[<span class="ruby-value">:login</span>]
     <span class="ruby-identifier">_address</span>[<span class="ruby-value">:searches</span>]  <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">path</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">regexp</span>[<span class="ruby-value">:search</span>]
     <span class="ruby-identifier">_address</span>[<span class="ruby-value">:downloads</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">path</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">regexp</span>[<span class="ruby-value">:download</span>]
   }
 
-  <span class="ruby-comment"># Now we need to fill in any months and licensees we didn't come across before.</span>
+  <span class="ruby-comment"># Now we need to fill in any months and licensees we didn&#39;t come across before.</span>
   <span class="ruby-identifier">months</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">month</span><span class="ruby-operator">|</span>
     <span class="ruby-identifier">stats</span>[<span class="ruby-identifier">month</span>] <span class="ruby-operator">||=</span> {}
 
@@ -498,52 +482,52 @@
         <span class="ruby-identifier">addresses</span>.<span class="ruby-identifier">delete_if</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">_</span>, <span class="ruby-identifier">stat</span><span class="ruby-operator">|</span> <span class="ruby-identifier">stat</span>[<span class="ruby-value">:sessions</span>].<span class="ruby-identifier">zero?</span> }
       <span class="ruby-keyword">end</span>
 
-      <span class="ruby-comment"># Add a default &quot;empty&quot; entry for completeness' sake.</span>
+      <span class="ruby-comment"># Add a default &quot;empty&quot; entry for completeness&#39; sake.</span>
       <span class="ruby-keyword">if</span> <span class="ruby-identifier">addresses</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">addresses</span>.<span class="ruby-identifier">empty?</span>
         <span class="ruby-identifier">stats</span>[<span class="ruby-identifier">month</span>][<span class="ruby-identifier">licensee</span>][<span class="ruby-identifier">hash</span>[<span class="ruby-value">:name</span>]] = { <span class="ruby-keyword">nil</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">DEFAULT_STATS</span> }
       <span class="ruby-keyword">end</span>
     }
   }
 
-  <span class="ruby-comment"># That's it, return what we've got.</span>
+  <span class="ruby-comment"># That&#39;s it, return what we&#39;ve got.</span>
   <span class="ruby-identifier">stats</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- parse-source -->
-            
-          </div>
-
+          </div><!-- parse-source -->
           
+        </div>
 
-          
-        </div><!-- parse-method -->
+        
 
-      
-      </div><!-- public-instance-method-details -->
+        
+      </div><!-- parse-method -->
+
     
-      <div id="protected-instance-method-details" class="method-section section">
-        <h3 class="section-header">Protected Instance Methods</h3>
+    </section><!-- public-instance-method-details -->
+  
+     <section id="protected-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Protected Instance Methods</h3>
 
-      
-        <div id="initialize_licensees-method" class="method-detail ">
-          <a name="method-i-initialize_licensees"></a>
+    
+      <div id="method-i-initialize_licensees" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">initialize_licensees</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Create additional mappings for our licensees.</p>
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">initialize_licensees</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Create additional mappings for our licensees.</p>
-            
-
-            
-            <div class="method-source-code" id="initialize_licensees-source">
-<pre>
-<span class="ruby-comment"># File lib/log2counter/parser.rb, line 195</span>
+          <div class="method-source-code" id="initialize_licensees-source">
+            <pre><span class="ruby-comment"># File lib/log2counter/parser.rb, line 197</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize_licensees</span>
   <span class="ruby-ivar">@licensees_by_ip</span> = {}
   <span class="ruby-ivar">@licensees_by_id</span> = {}
@@ -561,29 +545,26 @@
     <span class="ruby-identifier">find</span>(<span class="ruby-identifier">lambda</span> { [] }) { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">_</span><span class="ruby-operator">|</span> <span class="ruby-identifier">ip</span>[<span class="ruby-value">0</span>, <span class="ruby-identifier">key</span>.<span class="ruby-identifier">length</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">key</span> }.<span class="ruby-identifier">last</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- initialize_licensees-source -->
-            
-          </div>
-
+          </div><!-- initialize_licensees-source -->
           
+        </div>
 
-          
-        </div><!-- initialize_licensees-method -->
+        
 
-      
-      </div><!-- protected-instance-method-details -->
+        
+      </div><!-- initialize_licensees-method -->
+
     
-    </div><!-- 5Buntitled-5D -->
+    </section><!-- protected-instance-method-details -->
   
+  </section><!-- 5Buntitled-5D -->
 
-  </div><!-- documentation -->
+</div><!-- documentation -->
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
-  </div>
 
-</body>
-</html>
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
 

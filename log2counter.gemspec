@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors = ["Jens Wille"]
   s.date = %q{2011-04-29}
   s.description = %q{Convert (analyse) Apache log files to COUNTER CSV.}
-  s.email = %q{jens.wille@uni-koeln.de}
+  s.email = %q{jens.wille@gmail.com}
   s.executables = ["log2counter"]
   s.extra_rdoc_files = ["README", "COPYING", "ChangeLog"]
   s.files = ["lib/log2counter/printer.rb", "lib/log2counter/version.rb", "lib/log2counter/core_ext/sort_by_ip_or_host.rb", "lib/log2counter/core_ext/compare_strings_and_fixnums.rb", "lib/log2counter/vendor/log_parser.rb", "lib/log2counter/parser.rb", "lib/log2counter.rb", "bin/log2counter", "lib/log2counter/vendor/log_parser.rb.orig", "README", "ChangeLog", "Rakefile", "COPYING", "example/licensees.yaml"]

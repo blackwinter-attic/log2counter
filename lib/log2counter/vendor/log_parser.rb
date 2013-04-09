@@ -27,7 +27,7 @@
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
-# Modified by Jens Wille <jens.wille@uni-koeln.de>; see log_parser.rb.orig for the
+# Modified by Jens Wille <jens.wille@gmail.com>; see log_parser.rb.orig for the
 # original file.
 
 require 'logger'

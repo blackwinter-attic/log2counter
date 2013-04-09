@@ -4,16 +4,13 @@ begin
   require 'hen'
 
   Hen.lay! {{
-    :rubyforge => {
-      :project => %q{prometheus},
-      :package => %q{log2counter}
-    },
-
     :gem => {
+      :name         => %q{log2counter},
       :version      => Log2COUNTER::VERSION,
       :summary      => %q{Convert (analyse) Apache log files to COUNTER CSV.},
       :author       => %q{Jens Wille},
-      :email        => %q{jens.wille@uni-koeln.de},
+      :email        => %q{jens.wille@gmail.com},
+      :homepage     => :blackwinter,
       :extra_files  => FileList['lib/**/vendor/*'].to_a,
       :dependencies => [['fastercsv', '>= 1.2.3']]
     }

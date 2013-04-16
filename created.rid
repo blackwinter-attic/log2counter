@@ -1,7 +1,7 @@
-Tue, 09 Apr 2013 12:26:59 +0200
+Tue, 16 Apr 2013 12:31:27 +0200
 README	Tue, 09 Apr 2013 12:24:40 +0200
 COPYING	Tue, 09 Apr 2013 11:32:42 +0200
-ChangeLog	Tue, 09 Apr 2013 11:32:42 +0200
+ChangeLog	Tue, 16 Apr 2013 12:19:20 +0200
 lib/log2counter.rb	Tue, 09 Apr 2013 12:25:32 +0200
 lib/log2counter/parser.rb	Tue, 09 Apr 2013 12:25:42 +0200
 lib/log2counter/printer.rb	Tue, 09 Apr 2013 12:25:46 +0200

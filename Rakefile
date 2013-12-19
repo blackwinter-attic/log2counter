@@ -10,7 +10,7 @@ begin
       :summary      => %q{Convert (analyse) Apache log files to COUNTER CSV.},
       :author       => %q{Jens Wille},
       :email        => %q{jens.wille@gmail.com},
-      :license      => %q{AGPL},
+      :license      => %q{AGPL-3.0},
       :homepage     => :blackwinter,
       :extra_files  => FileList['lib/**/vendor/*'].to_a,
       :dependencies => [['fastercsv', '>= 1.2.3']]
